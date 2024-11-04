@@ -10,3 +10,7 @@
 
 ## Imagem1
 <img src="https://github.com/Emanoellima-dev/E-commerce-site/blob/main/imagens/imagem1.jpg" width="400" />
+
+### ao clicar no botão "detalhes" você terá a opção de salvar o produto no carrinho. veja na imagem abaixo:
+
+<img src="https://github.com/Emanoellima-dev/E-commerce-site/blob/main/imagens/imagem2.jpg" width="400" />
