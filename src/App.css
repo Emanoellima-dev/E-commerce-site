@@ -1,0 +1,36 @@
+h2 {
+ text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.loading {
+  background-color: white;
+  height: 25px;
+  width: 25px;
+  border: solid 2px white;
+  border-top-color: black;
+  border-radius: 50%;
+  animation: loading-animation 1s infinite linear;
+}
+
+@keyframes loading-animation {
+  to {
+    transform: rotate(360deg)
+  }
+}

@@ -1,0 +1,11 @@
+.text {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.Icon {
+  display: flex;
+  font-size: 5rem;
+  align-items: center;
+  justify-content: center;
+}

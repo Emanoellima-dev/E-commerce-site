@@ -1,0 +1,127 @@
+.Img {
+  width: 200px;
+  height: 200px;
+}
+
+.Content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px black;
+  height: 300px;
+  width: 730px;
+  gap: 15px;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+}
+
+.Container {
+ display: flex;
+ flex-wrap: wrap;
+ margin-left: 1rem;
+ margin-right: 1rem;
+ justify-content: space-between;
+ margin-top: 3rem;
+ align-items: center;
+ margin-left: 7rem;
+}
+
+.Text {
+  margin-bottom: 1rem;
+}
+
+.Price {
+ font-size: 2rem;
+ font-weight: bold;
+}
+
+.product-button {
+  margin-top: 2rem;
+  background-color: #2135f7;
+  color: #fff;
+  font-weight: bold;
+  padding: 7px;
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 8px;
+}
+
+.title-container {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.button-remove {
+  color: #fff;
+  background-color: red;
+  margin-left: 2rem;
+  font-weight: bold;
+  padding: 7px;
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 8px;
+}
+
+.loading {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 5%;
+}
+
+@media (min-width: 100px) and (max-width: 950px){
+ .Container {
+   margin-left: 1rem;
+   margin-top: 1.5rem;
+ }
+
+ .Content {
+  gap: 10px;
+  height: 320px;
+ }
+
+ .title-container {
+   margin-top: 0.3rem;
+   font-size: 1.7rem;
+ }
+
+ .Img {
+   height: 140px;
+   width: 140px;
+ }
+
+ .Text {
+   font-size: 1rem;
+   margin-top: 3rem;
+   margin-bottom: 0.5rem;
+ }
+
+ .Price {
+   font-size: 1rem;
+ }
+
+ .product-button {
+   font-size: 1rem;
+   margin-top: 0.7rem;
+   width: 80px;
+   margin-bottom: 0.8rem;
+   padding: 6px;
+   margin-left: 0.2rem;
+ }
+
+ .button-remove {
+  font-size: 0.9rem;
+  padding: 6px;
+  margin-left: 0.5rem;
+ }
+
+ .buttonArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ }
+
+ .loading {
+   font-size: 1.7rem;
+ }
+}
