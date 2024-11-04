@@ -5,26 +5,48 @@ import { FaUser } from "react-icons/fa";
 
 import './ProductItem.css'
 
-export default function ProductItem({ products }){
+export interface Product {
+  id: number,
+  title: string,
+  image: string,
+  price: number,
+  rating: {
+   rate: number,
+   count: number,
+  },
+}
+
+
+interface ProductItemProps {
+  products: Product[];
+}
+
+
+export default function ProductItem({ products }: ProductItemProps ){
  const navigate = useNavigate();
 
  return (
-   <div className="products-container" key={products.id}>
+  <>
+   { products && products.map((product) => (
+ 
+  <div className="products-container" key={product.id}>
 
-     <img src={products.image} alt={products.title} />
-     <h2 className="product-title">{products.title}</h2>
+     <img src={product.image} alt={product.title} />
+     <h2 className="product-title">{product.title}</h2>
 
      <div className="product-informations">
-       <p>Preço: {products.price}</p>
+       <p>Preço: {product.price}</p>
           
        <div className="product-rate">
-         <p><FaStar/>  {products.rating.rate}</p>
-	 <p><FaUser/>  {products.rating.count}</p>
+         <p><FaStar/>  {product.rating.rate}</p>
+	 <p><FaUser/>  {product.rating.count}</p>
 
        </div>
      </div>
 
-     <button className="button" onClick={ () => navigate(`/Detalhes/${products.id}`) }>Detalhes</button>
+     <button className="button" onClick={ () => navigate(`/Detalhes/${product.id}`) }>Detalhes</button>
    </div>
+  ))}
+  </>
  )
 }

@@ -6,16 +6,20 @@ import { FaStar } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 
 export interface Product {
-  id: number,                                     title: string,
+  id: number,
+  image: string,
+  title: string,
   price: number,
-  rate: number,
-  count: number,
+  rating: {
+    rate: number,
+    count: number,
+  },
 }
 
 import './style.css'
 
 export default function WomensClothing(){
- const [products, setProducts] = useState<Product>([]);
+ const [products, setProducts] = useState<Product[]>([]);
  const navigate = useNavigate();
 
  useEffect(() => {

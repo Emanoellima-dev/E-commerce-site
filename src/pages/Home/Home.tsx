@@ -6,10 +6,13 @@ import './Home.css'
 
 export interface Product {
   id: number,
+  image: string,
   title: string,
   price: number,
-  rate: number,
-  count: number,
+  rating: {
+   rate: number,
+   count: number,
+  },
 }
 
 export default function Home(){
@@ -45,7 +48,7 @@ export default function Home(){
        
       <div className="products">
         {products && products.map(product => 
-	  <ProductItem products={product} key={product.id}/>
+	  <ProductItem products={[product]} key={product.id}/>
 	)}
      </div>
 

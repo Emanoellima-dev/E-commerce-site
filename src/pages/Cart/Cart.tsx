@@ -4,12 +4,20 @@ import { useNavigate } from 'react-router-dom'
 
 import './Cart.css'
 
+export interface Product {
+  id: number,
+  image: string,
+  title: string,
+  price: number,
+}
+
 export default function Cart(){
- const [products, setProducts] = useState();
+ const [products, setProducts] = useState<Product[]>();
  const navigate = useNavigate();
  const [loading, setLoading] = useState(true)
+ const [update, setUpdate] = useState(false)
 
-async function removeProduct(id){
+async function removeProduct(id: number){
    try {
     const response = await axios.delete("https://api-9zqj.onrender.com/delete", {
     
@@ -17,9 +25,11 @@ async function removeProduct(id){
     })
 
      alert(response.data.message)
-   }catch(error){
-     alert(response.data.message)
-   }
+     setUpdate(!update)
+   }catch (error: any) {
+      const errorMessage = error.response?.data?.message || "Erro ao remover o produto";
+      alert(errorMessage);
+    }
  }
 
  useEffect(() => {
@@ -36,7 +46,7 @@ async function removeProduct(id){
    }
 
    buscarProdutos();
- }, [removeProduct])
+ }, [update])
 
  if(loading){
    return (

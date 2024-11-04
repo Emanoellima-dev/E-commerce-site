@@ -9,14 +9,17 @@ import './style.css'
 
 export interface Product {
   id: number,
+  image: string,
   title: string,
   price: number,
-  rate: number,
-  count: number,
+  rating: {
+   rate: number,
+   count: number,
+  },
 }
 
 export default function Eletronics(){
- const [products, setProducts] = useState<Product>([]);
+ const [products, setProducts] = useState<Product[]>([]);
  const navigate = useNavigate();
 
  useEffect(() => {

@@ -1,11 +1,12 @@
-import { useNavigate } from 'react-router-dom'
+import { FormEvent } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import './Checkout.css'
 
 export default function Checkout(){
   const navigate = useNavigate();
 
- function redirect(e){
+ function redirect(e: FormEvent<HTMLFormElement>){
    e.preventDefault();
     alert("Pagamento Feito com Sucesso! Aproveite! Navegue por mais produtos!!")
     navigate("/")

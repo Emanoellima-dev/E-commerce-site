@@ -2,20 +2,19 @@ import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
-import { FaStar } from "react-icons/fa";
-import { FaUser } from "react-icons/fa";
 
 import './Details.css'
 
 export interface ProductDetails {
   id: number,
+  image: string,
   title: string,
   description: string,
   price: number,
 }
 
 export default function Details(){
- const [product, setProduct] = useState<ProductDetails>([]);
+ const [product, setProduct] = useState<ProductDetails | null>(null);
  const [loading, setLoading] = useState(true)
  const { id } = useParams();
 
@@ -37,9 +36,9 @@ export default function Details(){
    getProduct();
  }, [])
 
- async function addProduct(id){
+ async function addProduct(id: number){
    try {
-    const response = await axios.post("https://api-9zqj.onrender.com/adicionar", {
+    await axios.post("https://api-9zqj.onrender.com/adicionar", {
     
      id,
     })
@@ -77,7 +76,7 @@ export default function Details(){
      )}
 
      <div className="button-area">
-        <button className="Button" onClick={() => addProduct(product.id)}>Adicionar Ao Carrinho</button>
+        <button className="Button" onClick={() => addProduct(product!.id)}>Adicionar Ao Carrinho</button>
 
         <button className="Button" onClick={ () => navigate("/carrinho") }>Ir Para o Carrinho</button>
       </div>
