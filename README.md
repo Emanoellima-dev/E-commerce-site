@@ -4,7 +4,7 @@
 ✔️ JAVASCRIPT + TYPESCRIPT + REACT
 ### Para o Backend usei o MONGODB para armazenar e recuperar os produtos que foram salvos no carrinho, com uma API feita com nodejs e express.
 
-## O site está hospedado no endereço: [https://e-commerce-site-aaxd.onrender.com](https://e-commerce-site-aaxd.onrender.com)
+## O site está hospedado no endereço: [https://e-commerce-site-aaxd.onrender.com](https://e-commerce-site-aaxd.onrender.com). Se você acessar o site pelo celular recomendo você ativar a opcão "Para computador" para ter uma melhor esperiência
 
 ## Ao abrir o site você verá uma lista com vários produtos como mostra a imagem abaixo:
 
@@ -19,6 +19,14 @@
 
 ### imagem 3
 <img src="https://github.com/Emanoellima-dev/E-commerce-site/blob/main/imagens/imagem3.jpg" width="400" />
+
+## Ao clicar em "comprar" e preencher o formulário, você simplesmente é redirecionado para a página inicial. NENHUMA compra é feita de verdade. observe isso nas imagens abaixo:
+
+### Imagens
+
+<img src="https://github.com/Emanoellima-dev/E-commerce-site/blob/main/imagens/imagem8.jpg" width="400" />
+
+<img src="https://github.com/Emanoellima-dev/E-commerce-site/blob/main/imagens/imagem9.jpg" width="400" />
 
 ## Você também pode ver os produtos por uma categoria específica. por exemplo: "roupas masculinas, roupas femininas" e etc. conforme mostra as imagens a seguir:
 
