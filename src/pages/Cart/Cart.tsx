@@ -19,12 +19,9 @@ export default function Cart(){
 
 async function removeProduct(id: number){
    try {
-    const response = await axios.delete("https://api-9zqj.onrender.com/delete", {
-    
-     data: { id: id }
-    })
+    const response = await axios.delete(`https://api-mongodb-wi6f.onrender.com/deleteProducts/${id}`)
 
-     alert(response.data.message)
+     alert("O Produto Foi Removido!")
      setUpdate(!update)
    }catch (error: any) {
       const errorMessage = error.response?.data?.message || "Erro ao remover o produto";
@@ -35,7 +32,7 @@ async function removeProduct(id: number){
  useEffect(() => {
    async function buscarProdutos(){
      try {
-       const response = await axios.get("https://api-9zqj.onrender.com/cart")
+       const response = await axios.get("https://api-mongodb-wi6f.onrender.com/cart")
 
        setProducts(response.data);
      }catch(error){

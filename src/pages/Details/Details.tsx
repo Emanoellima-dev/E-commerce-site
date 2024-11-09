@@ -38,7 +38,7 @@ export default function Details(){
 
  async function addProduct(id: number){
    try {
-    await axios.post("https://api-9zqj.onrender.com/adicionar", {
+    await axios.post("https://api-mongodb-wi6f.onrender.com/addProducts", {
     
      id,
     })
