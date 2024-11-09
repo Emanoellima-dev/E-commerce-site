@@ -19,7 +19,7 @@ export default function Cart(){
 
 async function removeProduct(id: number){
    try {
-    const response = await axios.delete(`https://api-mongodb-wi6f.onrender.com/deleteProducts/${id}`)
+    await axios.delete(`https://api-mongodb-wi6f.onrender.com/deleteProducts/${id}`)
 
      alert("O Produto Foi Removido!")
      setUpdate(!update)
